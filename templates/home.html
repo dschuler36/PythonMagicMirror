@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css')}}">
+	</head>
+
+<div class="main">
+	<div class='date', align="left">
+	{{ date }}
+	</div>
+
+	<div class="weather" align="right">
+		{{ tempFar }}°
+		<br/>
+		{{ desc }}
+		<br/>
+		{{ city }},
+		{{ state }}
+	</div>
+
+	<div class='time' align='middle'>
+	<p align='middle'>
+		{{ hour }}:{{ minute }}
+	</p>
+	</div>
+
+
+</div>
+	<div class='calendar'>
+		<h2>Here are your next 5 events:</h2>
+		{% for event in event_display %}
+			{% if (loop.index - 1) % 3 == 0 %}
+				<p class="summary">{{ event }}</p>
+			{% else %}
+				<p class="eventDate">{{ event }}</p>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+
+	<div class='message' align='middle'>
+		{{ message }}
+	</div>
+
+</html>

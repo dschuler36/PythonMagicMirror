@@ -1,0 +1,49 @@
+@font-face{
+	font-family: MyFont;
+	src: url('fonts/HelveticaNeue-Light.ttf');
+}
+html{
+	font-family: MyFont;
+	background: #000;
+	color: #fff;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.date{
+	padding-top: 15px;
+	font-size: 45px;
+	float: left;
+}
+.weather{
+	padding-top: 15px;
+	font-size: 45px;
+	float: right;
+	text-align: right;
+}
+.time{
+	font-size: 144px;
+	margin: 0 auto;
+}
+.summary{
+	font-size: 28px;
+	border-top: solid 5px white;
+	padding-top: 15px;
+}
+.eventDate{
+	font-size: 20px;
+	float: top;
+	vertical-align: text-top;
+}
+
+.calendar{
+	display: inline-block;
+	position: absolute;
+	float: left;
+}
+.message{
+	font-size: 28px;
+	position:absolute;
+   	bottom:0;
+  	width:100%;
+  	padding-bottom: 20px;
+}
