@@ -69,7 +69,10 @@ def main():
 
 
 def weather():
-	resp = requests.get('http://api.openweathermap.org/data/2.5/weather?lat=39.161999&lon=-84.456886&appid=fc0f56aea3337963a7fa8c1124926f37')
+    lat = "39.161999"
+	lon = "-84.456886"
+	open_weather_api_key = "get_your_own_key"
+	resp = requests.get(f'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={open_weather_api_key}')
 	
 	weatherData = resp.json()
 
